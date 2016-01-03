@@ -1,0 +1,59 @@
+// Base colors
+@fore : #dfdfdf;
+@back : #1f1d1c;
+
+
+// Spectrum
+@red     : #e79d8d;
+@orange  : #edbd7d;
+@yellow  : #f2de8d;
+@grass   : #c4ec9d;
+@lime    : #9fe080;
+@cyan    : #a1dbe3;
+@blue    : #96b3f2;
+@purple  : #aca6c9;
+
+@shade   : #909090;
+@shade-1 : #808080;
+@shade-2 : #606060;
+@shade-3 : #404040;
+
+// Elements / Aliases
+@punctuation           : @shade-1;
+@operator              : @red;
+@keyword               : @red;
+@keyword-control       : @red;
+
+@terminator            : @shade-2;
+@delimiter             : @shade-1;
+@brace                 : @shade-2;
+@string                : @cyan;
+@regexp                : @blue;
+@quote                 : @punctuation;
+@comment               : @purple;
+@comment-storage       : @storage;
+
+@function              : @orange;
+@support               : @grass;
+@support-type          : @keyword;
+@support-function      : @lime;
+
+@variable              : @yellow;
+@storage               : @shade;
+@entity                : @grass;
+@constant              : @variable;
+
+
+@caret           : #fff;
+@selection       : fade(lighten(@back, 50%), 15%);
+@selection-flash : red;
+
+@guide-wrap         : fadeout(@fore, 20%);
+@guide-indent       : fadeout(@fore, 20%);
+@whitespace         : fadeout(@fore, 92.5%);
+@whitespace-leading : fadeout(@whitespace, 3%);
+
+@gutter-fore          : fadeout(@fore, 50%);
+@gutter-fore-selected : fadeout(@fore, 75%);
+@gutter-back          : darken(@back, 2%);
+@gutter-back-selected : darken(@back, 5%);

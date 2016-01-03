@@ -1,0 +1,14 @@
+{
+    "name"        : "atom-null-syntax",
+    "theme"       : "syntax",
+    "version"     : "0.1.0",
+    "description" : "A dark content-focused systax theme",
+    "keywords"    : [
+        "dark", "syntax"
+    ],
+    "license" : "GNU",
+    "engines" : {
+        "atom": ">=1.0.0"
+    }
+
+}

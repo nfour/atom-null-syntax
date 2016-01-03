@@ -1,0 +1,38 @@
+@import (reference) "../language";
+
+.source.css {
+	.punctuation {
+		// Delimiters
+		&.separator.list {
+			._delimiter;
+		}
+
+		&.separator.key-value {
+			._operator;
+		}
+		// Brace
+		&.section,
+		&.bracket {
+			._brace;
+		}
+
+	}
+
+	.entity.attribute-name {
+		&.class, &.parent-selector, &.id {
+			& > .punctuation.definition.entity {
+				._support-type;
+			}
+		}
+	}
+
+	.support.type.property-name {
+		._variable;
+	}
+}
+
+.source.less {
+	&.support.function {
+		._function-call;
+	}
+}

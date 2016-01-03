@@ -1,0 +1,14 @@
+@import (reference) "../language";
+
+.php {
+	&.support.function.construct,
+	&.meta.function-call {
+		._function-call;
+	}
+
+	&.punctuation.definition.variable,
+	&.variable.other {
+		._variable;
+	}
+
+}

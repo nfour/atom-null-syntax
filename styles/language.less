@@ -1,0 +1,242 @@
+@import (reference) "./colors";
+
+//
+// BASE MIXINS
+//
+
+._punctuation { color: @punctuation; }
+._operator { color: @operator; }
+._keyword {
+    color            : @keyword;
+    background-color : fade(black, 15%);
+}
+
+._keyword-control { color: @keyword-control; }
+._delimiter { color: @delimiter; }
+._variable { color: @variable; }
+._quote { color: @quote; }
+._string { color: @string; }
+._regexp { color: @regexp; }
+._support { color: @support; }
+._support-type { color: @support-type; }
+._support-function {
+}
+._function { color: @function }
+._function-call {
+    border-bottom: 1px dotted fade(@function, 50%);
+    border-radius: 0 0 2px 2px;
+}
+._entity { color: @entity; }
+._constant { color: @constant; }
+._storage { color: @storage; }
+
+._terminator {
+    color       : @terminator;
+    font-weight : bold;
+}
+
+._brace, ._bracket {
+    color       : @brace;
+    font-weight : bold;
+    padding     : 0 0.075em;
+
+    .leading-whitespace:last-child {
+        margin-left: -0.075em;
+    }
+}
+
+._brace-curly {
+    ._brace;
+    //padding: 0;
+}
+
+// Parameters are styled with underscoring accents
+._param {
+    border-bottom: 2px solid fade(@brace, 25%);
+}
+._params-open {
+    // padding-right: 0.2em;
+    border-radius: 0 0 2px 5px;
+    ._param;
+}
+
+._params-close {
+    // padding-left: 0.2em;
+    border-radius: 0 0 5px 2px;
+    ._param;
+
+}
+
+._noise {
+    color: @punctuation;
+}
+
+//
+// Whitespace
+//
+
+.leading-whitespace {
+    color: @whitespace-leading;
+}
+
+
+//
+// Comments
+//
+
+.comment {
+    color            : @comment !important;
+    background-color : mix(@back, black, 85%);
+
+    .storage, .keyword {
+        color: @comment-storage !important;
+    }
+}
+
+
+//
+// Punctuation
+//
+
+.punctuation { ._punctuation; }
+
+//
+// Delimiters
+//
+
+.meta.delimiter { ._delimiter; }
+
+//
+// Operators, control keywords
+//
+
+.keyword.reserved,
+.keyword.control { ._keyword; }
+
+.punctuation.seperator.key-value,
+.keyword.operator,
+.keyword.other { ._operator; }
+
+//
+// Terminators
+//
+
+.punctuation.terminator { ._terminator; }
+
+
+//
+// Braces, Brackets, Quotes
+//
+
+.meta.brace,
+.meta.bracket {
+    ._brace;
+}
+
+.meta.group.braces {
+    & > .meta.brace {
+        ._brace;
+    }
+}
+
+.meta.brace.curly {
+    ._brace-curly;
+}
+
+
+//
+// Parameters
+//
+
+.punctuation.definition.parameters.begin,
+.punctuation.definition.arguments.begin {
+    ._brace;
+    ._params-open;
+}
+
+.punctuation.definition.parameters.end,
+.punctuation.definition.arguments.end {
+    ._brace;
+    ._params-close;
+}
+
+
+//
+// Strings
+//
+
+.punctuation.definition.string { ._quote; }
+.string,
+.constant.numeric { ._string; }
+
+.string.regexp {
+    ._regexp;
+}
+
+
+//
+// Storage, Variables
+//
+
+.variable.language {
+    ._variable;
+}
+
+.variable.class,
+.support.class {
+    ._variable;
+}
+
+.support.type {
+    ._support-type;
+}
+
+.storage.type,
+.storage.modifier {
+    ._storage;
+}
+
+//
+// Entities
+//
+
+.entity.instance,
+.entity.other,
+.entity.type { ._entity; }
+
+
+//
+// Constants
+//
+
+.constant {
+    ._constant;
+}
+
+.constant.language {
+    font-style: italic;
+}
+
+//
+// Functions
+//
+
+.meta.function-call,
+.meta.method-call {
+    > .entity.function,
+    > .support.function { ._function-call; }
+}
+
+.class.constructor > .entity.instance {
+    ._function-call;
+}
+
+.support { ._support; }
+
+.entity.function,
+.support.function { ._function; }
+.support.function { ._support-function; }
+
+//
+// Noise
+//
