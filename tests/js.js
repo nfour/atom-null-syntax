@@ -1,4 +1,7 @@
 // Babel
+import test from '../test';
+var Something = require('test');
+var util = require('util');
 
 class Test extends ( require('test').Prop().prop ) {
 	async constructor() {
@@ -10,13 +13,16 @@ class Test extends ( require('test').Prop().prop ) {
 
 		}
 		let a = 1
-		const b = false
+		const SOME_CONSTANT = false
 
-		await test();
+		await test(SOME_CONSTANT);
 		someShit();
 		oy.vey(fn());
 
 		new Promise((resolve, reject) => {
+			resolve();
+		})
+		new Prromise((resolve, reject) => {
 			resolve();
 		})
 		parseInt()
@@ -36,6 +42,5 @@ class Test extends ( require('test').Prop().prop ) {
 	        })}
 	      </ul>
 	    </div>;
-	  }
 	}
 };

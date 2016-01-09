@@ -14,6 +14,7 @@
 ._keyword-control { color: @keyword-control; }
 ._delimiter { color: @delimiter; }
 ._variable { color: @variable; }
+._class { color: @class; }
 ._quote { color: @quote; }
 ._string { color: @string; }
 ._regexp { color: @regexp; }
@@ -182,10 +183,6 @@
     ._variable;
 }
 
-.variable.class,
-.support.class {
-    ._variable;
-}
 
 .support.type {
     ._support-type;
@@ -195,14 +192,6 @@
 .storage.modifier {
     ._storage;
 }
-
-//
-// Entities
-//
-
-.entity.instance,
-.entity.other,
-.entity.type { ._entity; }
 
 
 //
@@ -216,6 +205,27 @@
 .constant.language {
     font-style: italic;
 }
+
+//
+// Classes
+//
+
+.entity.name.class,
+.entity.other.inherited-class,
+.variable.class,
+.entity.type.new,
+.support.class {
+    ._class;
+}
+
+//
+// Entities
+//
+
+.entity.instance,
+.entity.other,
+.entity.type { ._entity; }
+
 
 //
 // Functions
@@ -236,7 +246,3 @@
 .entity.function,
 .support.function { ._function; }
 .support.function { ._support-function; }
-
-//
-// Noise
-//

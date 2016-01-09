@@ -1,6 +1,6 @@
 // Base colors
 @fore : #dfdfdf;
-@back : #1f1d1c;
+@back : #1d1b1a;
 
 
 // Spectrum
@@ -19,30 +19,30 @@
 @shade-3 : #404040;
 
 // Elements / Aliases
-@punctuation           : @shade-1;
-@operator              : @red;
-@keyword               : @red;
-@keyword-control       : @red;
+@punctuation      : @shade-1;
+@operator         : @red;
+@keyword          : @red;
+@keyword-control  : @red;
 
-@terminator            : @shade-2;
-@delimiter             : @shade-1;
-@brace                 : @shade-2;
-@string                : @cyan;
-@regexp                : @blue;
-@quote                 : @punctuation;
-@comment               : @purple;
-@comment-storage       : @storage;
+@terminator       : @shade-2;
+@delimiter        : @shade-1;
+@brace            : @shade-2;
+@string           : @cyan;
+@regexp           : @blue;
+@quote            : @punctuation;
+@comment          : @purple;
+@comment-storage  : @storage;
 
-@function              : @orange;
-@support               : @grass;
-@support-type          : @keyword;
-@support-function      : @lime;
+@function         : @orange;
 
-@variable              : @yellow;
-@storage               : @shade;
-@entity                : @grass;
-@constant              : @variable;
-
+@variable         : @yellow;
+@support          : mix(@yellow, @fore);
+@support-type     : @keyword;
+@support-function : @lime;
+@storage          : @shade;
+@entity           : @yellow;
+@constant         : @variable;
+@class            : @grass;
 
 @caret           : #fff;
 @selection       : fade(lighten(@back, 50%), 15%);

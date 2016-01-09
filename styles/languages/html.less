@@ -1,7 +1,19 @@
 @import (reference) "../language";
 
-.html {
-	&.entity.name.tag {
-		._keyword;
+.html, .jsx {
+	.entity.name.tag {
+		color: @function;
+
+		&.close {
+			color: @punctuation;
+		}
+	}
+
+
+}
+
+.jsx {
+	.entity.other.attribute-name {
+		font-style: normal !important;
 	}
 }
