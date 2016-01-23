@@ -19,6 +19,8 @@ class Test extends ( require('test').Prop().prop ) {
 		someShit();
 		oy.vey(fn());
 
+		new this.is.some['aa'].Thing()
+
 		new Promise((resolve, reject) => {
 			resolve();
 		})
