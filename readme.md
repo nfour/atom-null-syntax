@@ -2,6 +2,8 @@
 
 A syntax theme for Atom. Fades out structural elements, highlights control flow elements.
 
+![Screenshot](http://i.imgur.com/GOyYFou.png)
+
 - Reds correspond with operators, built-ins and keyword operators.
 - Orange with functions and function-calls.
 - Yellows/Gold for constants and built-in constants like `this`, `false`.
