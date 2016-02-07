@@ -1,10 +1,18 @@
-# Null syntax
+# Null Syntax
 
-A syntax theme for Atom which tries to hide punctuation, delimiters and other cruft.
-Consists of a `red, orange, yellow, grass, lime, cyan, blue, purple` color spectrum.
+A syntax theme for Atom. Fades out structural elements, highlights control flow elements.
 
-Focus:
-- Javascript (language-babel)
+- Reds correspond with operators, built-ins and keyword operators.
+- Orange with functions and function-calls.
+- Yellows/Gold for constants and built-in constants like `this`, `false`.
+- Yellow/Greens for entities, classes.
+- Blues for integers, regexp, strings and keys.
+- Gray/Purple for comments
+- Gray for braces, parens, semicolons, commas and storage keywords like `let`, `async`
+- Whites for everything else, such as general variables.
+
+Language Focus:
+- Javascript with `language-babel`
 - JSX, HTML
-- CSS, Less
+- CSS, Less, Stylus
 - Markdown
