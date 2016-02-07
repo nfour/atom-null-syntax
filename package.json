@@ -4,7 +4,7 @@
   "version": "0.5.1",
   "author": "nfour",
   "repository": "https://github.com/nfour/atom-null-syntax.git",
-  "description": "A dark content-focused systax theme",
+  "description": "Fades out structural noise",
   "keywords": [
     "dark",
     "syntax"

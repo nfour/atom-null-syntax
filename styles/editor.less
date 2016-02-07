@@ -51,10 +51,46 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
     }
 
     .selection .region {
-        background-color: @syntax-selection-color;
+        background-color : @syntax-selection-color;
+        border-left      : 2px solid @selection-border;
+        margin-left      : -2px;
+        border-radius    : 0 !important;
+
+        &::after {
+            content       : '';
+            display       : block;
+            height        : 100%;
+            margin-right  : -2px;
+            border-right  : 2px solid fadein(@selection-border, 7%);
+        }
+    }
+
+    .highlight-selected .region {
+        border-radius : 0 !important;
+        border        : 2px solid @selection-border !important;
+        border-width  : 2px 0 !important;
+        margin-left   : 0;
+
     }
 
     .bracket-matcher .region {
-        border-color: @syntax-result-marker-color;
+        border-radius  : 0 !important;
+        border         : 2px solid @selection-border !important;
+        border-width   : 0 0 2px !important;
+
+        &:after {
+            border-color: transparent !important;
+            background-color: transparent !important;
+        }
+    }
+
+    .indent-guide-improved {
+        background-color: rgba(255,255,255, 0.075);
+        &.indent-guide-stack {
+            background-color: rgba(255,255,255, 0.05);
+            &.indent-guide-active {
+                background-color: rgba(185,215,255, 0.25);
+            }
+        }
     }
 }
