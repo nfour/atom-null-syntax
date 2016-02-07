@@ -1,7 +1,7 @@
 {
   "name": "null-syntax",
   "theme": "syntax",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "author": "nfour",
   "repository": "https://github.com/nfour/atom-null-syntax.git",
   "description": "A dark content-focused systax theme",
