@@ -28,6 +28,7 @@
 }
 ._entity { color: @entity; }
 ._constant { color: @constant; }
+._language-constant { color: @variable; }
 ._storage { color: @storage; }
 
 ._terminator {
@@ -205,20 +206,17 @@
     ._constant;
 }
 
-.constant.language {
-    font-style: italic;
-}
-
-//
-// Classes
-//
-
 .entity.name.class,
 .entity.other.inherited-class,
 .variable.class,
 .entity.type.new,
 .support.class {
     ._class;
+}
+
+.constant.language {
+    ._language-constant;
+    font-style: italic;
 }
 
 //
