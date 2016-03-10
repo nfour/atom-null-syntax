@@ -5,6 +5,11 @@ var util      = require('util');
 
 class Test extends ( require('test').Prop().prop ) {
     async constructor() {
+        super()
+        super.value
+
+        const Variable = 1
+
         this.test(function() {
             var wew = lad;
         });
@@ -16,8 +21,9 @@ class Test extends ( require('test').Prop().prop ) {
         let a = 1
         if ( a ) { }
 
-        const SOME_CONSTANT = false
+        const SOME_CONSTANT = false || null || true || undefined || Infinity
 
+        c.SOME_CONSTANT.a.b
         oy.vey(shoah());
 
         await new this.is.some['aa'].Thing()
@@ -34,11 +40,17 @@ class Test extends ( require('test').Prop().prop ) {
         switch ( 1) {
             case "weee":
             case test:
+            default:
         }
 
         const fn = (
             a = 1
         ) => { return 1 }
+
+        const fn2 = ({
+            a = 1
+        }) => { return 1 }
+
 
         process.argv.NODE_ENV
         module.exports.test
