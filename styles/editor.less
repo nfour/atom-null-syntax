@@ -1,5 +1,17 @@
 
-// Editor styles (background, gutter, guides)
+atom-text-editor::shadow  {
+    .linter-highlight {
+        &.error .region {
+            background: fade(red, 8.5%);
+            border-color: fade(red, 40%);
+        }
+
+        &.warning .region {
+            background: fade(white, 2.5%);
+            border-color: fade(orange, 35%);
+        }
+    }
+}
 
 atom-text-editor, // <- remove when Shadow DOM can't be disabled
 :host {
