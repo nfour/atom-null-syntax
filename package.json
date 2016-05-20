@@ -1,7 +1,7 @@
 {
   "name": "null-syntax",
   "theme": "syntax",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "author": "nfour",
   "repository": "https://github.com/nfour/atom-null-syntax.git",
   "description": "Fades out structural noise",
