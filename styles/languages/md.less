@@ -1,28 +1,28 @@
 @import (reference) '../language';
 
-.syntax--source.syntax--gfm, .syntax--source.syntax--md {
-	.syntax--markup {
-		&.syntax--heading {
+.source.gfm, .source.md {
+	.markup {
+		&.heading {
 			font-weight : 600;
 			line-height : 0em;
 
-			&.syntax--heading-1 { font-size: 1.24em; }
-			&.syntax--heading-2 { font-size: 1.16em; }
-			&.syntax--heading-3 { font-size: 1.08em; }
+			&.heading-1 { font-size: 1.24em; }
+			&.heading-2 { font-size: 1.16em; }
+			&.heading-3 { font-size: 1.08em; }
 
 			._entity;
 
-			&.syntax--marker, &.syntax--space { ._punctuation }
+			&.marker, &.space { ._punctuation }
 		}
 
-		&.syntax--code {
+		&.code {
 			color            : mix(@fore, @shade);
 			background-color : darken(@back, 5%) !important;
-			.syntax--support { ._punctuation; }
+			.support { ._punctuation; }
 		}
 	}
 
-	.syntax--variable.syntax--list {
+	.variable.list {
 		._keyword;
 	}
 

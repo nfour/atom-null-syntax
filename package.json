@@ -1,67 +1,16 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-        "scope": null,
-        "escapedName": null,
-        "name": null,
-        "rawSpec": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-        "spec": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-        "type": "local"
-      },
-      "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\apm-install-dir-11719-10900-5e6t6f"
-    ]
-  ],
-  "_from": "..\\d-11719-10900-y0pad3\\package.tgz",
-  "_id": "null-syntax@0.11.4",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/null-syntax",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-    "scope": null,
-    "escapedName": null,
-    "name": null,
-    "rawSpec": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-    "spec": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-    "type": "local"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "file:..\\d-11719-10900-y0pad3\\package.tgz",
-  "_shasum": "c98af7c7e7f64681897b546b753ed3bb5b73c041",
-  "_shrinkwrap": null,
-  "_spec": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\d-11719-10900-y0pad3\\package.tgz",
-  "_where": "C:\\Users\\Cgarcia\\AppData\\Local\\Temp\\apm-install-dir-11719-10900-5e6t6f",
-  "author": {
-    "name": "nfour"
-  },
-  "bugs": {
-    "url": "https://github.com/nfour/atom-null-syntax/issues"
-  },
-  "dependencies": {},
+  "name": "null-syntax",
+  "theme": "syntax",
+  "version": "0.11.4",
+  "author": "nfour",
+  "repository": "https://github.com/nfour/atom-null-syntax.git",
   "description": "Fades out structural noise",
-  "devDependencies": {},
-  "engines": {
-    "atom": ">=1.0.0"
-  },
-  "homepage": "https://github.com/nfour/atom-null-syntax#readme",
   "keywords": [
     "dark",
     "syntax"
   ],
   "license": "GNU",
-  "name": "null-syntax",
-  "optionalDependencies": {},
-  "readme": "# Null Syntax\n\nA syntax theme for Atom. Fades out structural elements, highlights control flow elements.\n\n![Screenshot](http://i.imgur.com/GOyYFou.png)\n\n- Reds correspond with operators, built-ins and keyword operators.\n- Orange with functions and function-calls.\n- Yellows/Gold for constants and built-in constants like `this`, `false`.\n- Yellow/Greens for entities, classes.\n- Blues for integers, regexp, strings and keys.\n- Gray/Purple for comments\n- Gray for braces, parens, semicolons, commas and storage keywords like `let`, `async`\n- Whites for everything else, such as general variables.\n\nLanguage Focus:\n- Javascript with `language-babel`\n- JSON, Yaml\n- PHP, Rust\n- JSX, HTML, XML\n- CSS, Less, Sass, Stylus\n- Markdown\n\n\n### Be aware\nMost language grammars aren't as rich as `language-babel`, thus many elements cannot be targeted.\nThis is what allows for syntax themes like this.\n",
-  "readmeFilename": "README.md",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nfour/atom-null-syntax.git"
-  },
-  "theme": "syntax",
-  "version": "0.11.4"
+  "engines": {
+    "atom": ">=1.0.0"
+  }
 }

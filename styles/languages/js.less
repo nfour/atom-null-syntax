@@ -1,24 +1,24 @@
 @import (reference) '../language';
 
-.syntax--source.syntax--js {
-	.syntax--without-arguments > .syntax--group.syntax--braces.syntax--function {
+.source.js {
+	.without-arguments > .group.braces.function {
 		._brace;
 	}
 
-	.syntax--keyword.syntax--control.syntax--module {
+	.keyword.control.module {
 		._storage;
 	}
 
-	.syntax--string.syntax--quasi {
-		.syntax--entity.syntax--quasi {
+	.string.quasi {
+		.entity.quasi {
 			color: @fore;
 		}
 	}
 
-	.syntax--support.syntax--type.syntax--object {
-		&.syntax--node,
-		&.syntax--module,
-		&.syntax--process {
+	.support.type.object {
+		&.node,
+		&.module,
+		&.process {
 			._entity;
 		}
 	}
