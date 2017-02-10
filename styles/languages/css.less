@@ -1,50 +1,50 @@
 @import (reference) "../language";
 
-.source.css {
-	.punctuation {
+.syntax--source.syntax--css {
+	.syntax--punctuation {
 		// Delimiters
-		&.separator.list {
+		&.syntax--separator.syntax--list {
 			._delimiter;
 		}
 
-		&.separator.key-value,
-		&.definition.entity {
+		&.syntax--separator.syntax--key-value,
+		&.syntax--definition.syntax--entity {
 			._operator;
 		}
 		// Brace
-		&.section,
-		&.bracket {
+		&.syntax--section,
+		&.syntax--bracket {
 			._brace;
 		}
 
 	}
 
-	.entity.attribute-name {
+	.syntax--entity.syntax--attribute-name {
 		color: @fore;
 
-		&.pseudo-class {
+		&.syntax--pseudo-class {
 			._entity;
 		}
 
-		&.class, &.parent-selector, &.id {
-			& > .punctuation.definition.entity {
+		&.syntax--class, &.syntax--parent-selector, &.syntax--id {
+			& > .syntax--punctuation.syntax--definition.syntax--entity {
 				._support-type;
 			}
 		}
 	}
 
 
-	.support.type.property-name {
-		._function;
+	.syntax--support.syntax--type.syntax--property-name {
+		.syntax--_function;
 	}
 
-	.support.constant {
+	.syntax--support.syntax--constant {
 		._constant;
 	}
 }
 
-.source.less {
-	&.support.function {
+.syntax--source.syntax--less {
+	&.syntax--support.syntax--function {
 		._function-call;
 	}
 }

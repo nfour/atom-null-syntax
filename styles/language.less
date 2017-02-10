@@ -21,7 +21,7 @@
 ._support-type { color: @support-type; }
 ._support-function {
 }
-._function { color: @function }
+.syntax--_function { color: @function }
 ._function-call {
     border-bottom: 1px dotted fade(@function, 50%);
     border-radius: 0 0 2px 2px;
@@ -90,10 +90,10 @@
 // Comments
 //
 
-.comment {
+.syntax--comment {
     color            : @comment !important;
 
-    .storage, .keyword {
+    .syntax--storage, .syntax--keyword {
         color: @comment-storage !important;
     }
 }
@@ -103,48 +103,48 @@
 // Punctuation
 //
 
-.punctuation { ._punctuation; }
+.syntax--punctuation { ._punctuation; }
 
 //
 // Delimiters
 //
 
-.meta.delimiter { ._delimiter; }
+.syntax--meta.syntax--delimiter { ._delimiter; }
 
 //
 // Operators, control keywords
 //
 
-.keyword.reserved,
-.keyword.control { ._keyword; }
+.syntax--keyword.syntax--reserved,
+.syntax--keyword.syntax--control { ._keyword; }
 
-.punctuation.separator.key-value,
-.keyword.operator,
-.keyword.other { ._operator; }
+.syntax--punctuation.syntax--separator.syntax--key-value,
+.syntax--keyword.syntax--operator,
+.syntax--keyword.syntax--other { ._operator; }
 
 //
 // Terminators
 //
 
-.punctuation.terminator { ._terminator; }
+.syntax--punctuation.syntax--terminator { ._terminator; }
 
 
 //
 // Braces, Brackets, Quotes
 //
 
-.meta.brace,
-.meta.bracket {
+.syntax--meta.syntax--brace,
+.syntax--meta.syntax--bracket {
     ._brace;
 }
 
-.meta.group.braces {
-    & > .meta.brace {
+.syntax--meta.syntax--group.syntax--braces {
+    & > .syntax--meta.syntax--brace {
         ._brace;
     }
 }
 
-.meta.brace.curly {
+.syntax--meta.syntax--brace.syntax--curly {
     ._brace-curly;
 }
 
@@ -153,14 +153,14 @@
 // Parameters
 //
 
-.punctuation.definition.parameters.begin,
-.punctuation.definition.arguments.begin {
+.syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin {
     ._brace;
     ._params-open;
 }
 
-.punctuation.definition.parameters.end,
-.punctuation.definition.arguments.end {
+.syntax--punctuation.syntax--definition.syntax--parameters.syntax--end,
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--end {
     ._brace;
     ._params-close;
 }
@@ -170,11 +170,12 @@
 // Strings
 //
 
-.punctuation.definition.string { ._quote; }
-.string,
-.constant.numeric { ._string; }
+.syntax--punctuation.syntax--definition.syntax--string { ._quote; }
+.syntax--string { ._string; }
+.syntax--unquoted {color: @fore;}
+.syntax--constant.syntax--numeric { color: @yellow; }
 
-.string.regexp {
+.syntax--string.syntax--regexp {
     ._regexp;
 }
 
@@ -183,17 +184,17 @@
 // Storage, Variables
 //
 
-.variable.language {
+.syntax--variable.syntax--language {
     ._variable;
 }
 
 
-.support.type {
+.syntax--support.syntax--type {
     ._support-type;
 }
 
-.storage.type,
-.storage.modifier {
+.syntax--storage.syntax--type,
+.syntax--storage.syntax--modifier {
     ._storage;
 }
 
@@ -202,19 +203,19 @@
 // Constants
 //
 
-.constant {
+.syntax--constant {
     ._constant;
 }
 
-.entity.name.class,
-.entity.other.inherited-class,
-.variable.class,
-.entity.type.new,
-.support.class {
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--other.syntax--inherited-class,
+.syntax--variable.syntax--class,
+.syntax--entity.syntax--type.syntax--new,
+.syntax--support.syntax--class {
     ._class;
 }
 
-.constant.language {
+.syntax--constant.syntax--language {
     ._language-constant;
     font-style: italic;
 }
@@ -223,27 +224,27 @@
 // Entities
 //
 
-.entity.instance,
-.entity.other,
-.entity.type { ._entity; }
+.syntax--entity.syntax--instance,
+.syntax--entity.syntax--other,
+.syntax--entity.syntax--type { ._entity; }
 
 
 //
 // Functions
 //
 
-.meta.function-call,
-.meta.method-call {
-    > .entity.function,
-    > .support.function { ._function-call; }
+.syntax--meta.syntax--function-call,
+.syntax--meta.syntax--method-call {
+    > .syntax--entity.syntax--function,
+    > .syntax--support.syntax--function { ._function-call; }
 }
 
-.class.constructor > .entity.instance {
+.syntax--class.syntax--constructor > .syntax--entity.syntax--instance {
     ._function-call;
 }
 
-.support { ._support; }
+.syntax--support { ._support; }
 
-.entity.function,
-.support.function { ._function; }
-.support.function { ._support-function; }
+.syntax--entity.syntax--function,
+.syntax--support.syntax--function { .syntax--_function; }
+.syntax--support.syntax--function { ._support-function; }
