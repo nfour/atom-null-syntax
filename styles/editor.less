@@ -1,20 +1,18 @@
-
-atom-text-editor::shadow  {
+atom-text-editor.editor {
     .linter-highlight {
-        &.error .region {
+        &.syntax--error .region {
             background: fade(red, 8.5%);
             border-color: fade(red, 40%);
         }
 
-        &.warning .region {
+        &.syntax--warning .region {
             background: fade(white, 2.5%);
             border-color: fade(orange, 35%);
         }
     }
 }
 
-atom-text-editor, // <- remove when Shadow DOM can't be disabled
-:host {
+atom-text-editor {
     background-color: @syntax-background-color;
     color: @syntax-text-color;
 
